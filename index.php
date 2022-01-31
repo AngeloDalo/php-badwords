@@ -19,8 +19,8 @@
 </head>
 <body>
     <h1>Frase</h1>
-    <p><?php $frase ?></p>
+    <p><?php echo $frase ?></p>
     <h2>Numero lettere</h2>
-    <span><?php strlen($frase)?> </span>
+    <span><?php echo strlen($frase)?> </span>
 </body>
 </html>
