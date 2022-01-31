@@ -6,7 +6,7 @@
     $frase = 'Il calcolo del contenuto galattico di idrogeno neutro utilizzato con le opportune limitazioni di significato quando si tenga conto delle necessarie condizioni al contorno mediante un\'ovvia scelta dei parametri che definiscono la situazione concreta caratterizza in modo quasi elementare la presenza di strutture stellari anomale e una corretta rappresentazione dei campi magnetici dai quali ci si aspetta un contributo determinante per la soluzione di molti problemi astrofisici.';
     $parola_censurata = $_GET["censura"];
     //http://localhost/PHP/intro_php/php-badwords/?censura=determinante
-    echo str_replace($parola_censurata,"***", $frase);
+    $frase_censurata = str_replace($parola_censurata,"***", $frase);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,12 @@
 <body>
     <h1>Frase</h1>
     <p><?php echo $frase ?></p>
+    <h1>Frase censurata</h1>
+    <p><?php echo $frase_censurata ?></p>
     <h2>Numero lettere</h2>
     <span><?php echo strlen($frase)?> </span>
+    <h2>Numero lettere frase censurate</h2>
+    <span><?php echo strlen($frase_censurata)?> </span>
+
 </body>
 </html>
